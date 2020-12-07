@@ -67,6 +67,12 @@ class ArticulosController extends Controller
         $articulo->delete();
   
         return redirect()->route('articulos.index')
-                        ->with('success','Contac deleted successfully');
+          
+        ->with('success','Contac deleted successfully');
+    }
+
+    public function buscador(Request $request){
+        $articulos   =   Nombres::where("descripcion",'like',$request->texto."%")->take(10)->get();
+        return view('articulos.index',compact("descripcion"));        
     }
 }

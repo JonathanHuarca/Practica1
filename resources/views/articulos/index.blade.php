@@ -8,9 +8,13 @@
                 <h2>Visualizar todos los articulos</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('articulos.create') }}"> Crear nuevo Articulo</a>
-                <input  type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <div class="input-group">
+                 <form  class="input-group"  method="POST">
+                 <a class="btn btn-success" href="{{ route('articulos.create') }}"> Crear nuevo Articulo</a>
+                 <input  style="margin-left:30em" type="text" class="form-control" name='descripcion' placeholder="Ingrese nombre">
+                  <a  class="btn btn-primary">Buscar</a>
+                </form>
+                </div>
             </div>
         </div>
     </div>
