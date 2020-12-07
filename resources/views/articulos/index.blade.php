@@ -9,6 +9,8 @@
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('articulos.create') }}"> Crear nuevo Articulo</a>
+                <input  type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </div>
         </div>
     </div>
